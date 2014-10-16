@@ -638,7 +638,7 @@ var JL = (function() {
         JL.ConsoleAppender = ConsoleAppender;
 
         // --------------------
-        var Logger = (function () {
+        function Logger() {
             function Logger(loggerName) {
                 this.loggerName = loggerName;
                 // Create seenRexes, otherwise this logger will use the seenRexes
@@ -778,8 +778,8 @@ var JL = (function() {
                 return this.log(getFatalLevel(), logObject, e);
             };
             return Logger;
-        })();
-        JL.Logger = Logger;
+        };
+        JL.Logger = new Logger();
 
         function createAjaxAppender(appenderName) {
             return new AjaxAppender(appenderName);
