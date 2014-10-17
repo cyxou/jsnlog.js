@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 
 /// <reference path="jsnlog_interfaces.d.ts"/>
 var JL = (function() {
